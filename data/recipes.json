@@ -1,0 +1,3784 @@
+{
+  "source": "DF - Black Site Crafting Costs S11.xlsx",
+  "intermediates": [
+    {
+      "item": "Intermediate Ammo Production Parts",
+      "quantity": 4,
+      "materials": [
+        {
+          "item": "E-Type Canister",
+          "quantity": 1
+        },
+        {
+          "item": "Hammer Drill",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item": "Titanium Alloy",
+      "quantity": 4,
+      "materials": [
+        {
+          "item": "Programmable Processor",
+          "quantity": 1
+        },
+        {
+          "item": "Orange Energy Gel",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item": "Premium Fuel",
+      "quantity": 4,
+      "materials": [
+        {
+          "item": "Cutlass",
+          "quantity": 1
+        },
+        {
+          "item": "Boxed Drip Coffee",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "workshop": "Workbench",
+      "item": "12.7x55mm",
+      "quality": 5,
+      "quantity": 90,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 4
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "4.6x30mm AP SX",
+      "quality": 5,
+      "quantity": 150,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.45x39mm BS",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.56x45mm M995",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.7x28mm",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.8x42mm DVC12",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "6.8x51mm Hybrid",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 3
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x39mm AP",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x51mm M62",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x54R BT",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "9x39mm",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".45 ACP Super",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 2
+        },
+        {
+          "item": "Audio Player",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".357 Magnum",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Memory Card",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".45 ACP AP",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 1
+        },
+        {
+          "item": ".45 Green",
+          "quantity": 20,
+          "price": 111
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".50 AE",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "12 Gauge Slug AP-20",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "12 Gauge Green",
+          "quantity": 30,
+          "price": 52
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "12 Gauge Dragon's Breath",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "12.7x55mm PS12",
+      "quality": 4,
+      "quantity": 120,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 4
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Audio Player",
+          "quantity": 1
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "12.7x55mm PD12",
+      "quality": 4,
+      "quantity": 120,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 3
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 3
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "4.6x30mm FMJ SX",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.45x39mm BT",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.56x45mm M855A1",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Power",
+          "quantity": 1
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.7x28mm SS193",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "5.7x28 Green",
+          "quantity": 60,
+          "price": 97
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "5.8x42mm DBP10",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "5.8x42 Green",
+          "quantity": 150,
+          "price": 84
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "6.8x51mm FMJ",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x39mm BP",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 1
+        },
+        {
+          "item": "7.62x39 Green",
+          "quantity": 30,
+          "price": 101
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x51mm M80",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "7.62x54R LPS",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 1
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "9x19mm PBP",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "9x19 Green",
+          "quantity": 30,
+          "price": 83
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "9x39mm SP6",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".300 BLK",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": ".300 BLK",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Fuel",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "Carbon Fiber Armor-Piercing Arrow",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Spinning Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 3
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "Carbon Fiber Bone-Piercer Arrow",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "45-70 Govt",
+      "quality": 5,
+      "quantity": 120,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 3
+        },
+        {
+          "item": "Spinning Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 2
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "45-70 Govt",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 3
+        },
+        {
+          "item": "Gunpowder",
+          "quantity": 1
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "4.6x30mm AP ST",
+      "quality": 5,
+      "quantity": 150,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Premium Fuel",
+          "quantity": 1
+        },
+        {
+          "item": "Space Coolant",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "4.6x30mm FMJ ST",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "4.6x30mm CT",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Electric Demolition Hammer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Workbench",
+      "item": "12 Gauge DART",
+      "quality": 4,
+      "quantity": 180,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Intermediate Ammo Production Parts",
+          "quantity": 3
+        },
+        {
+          "item": "Basic Ammo Prod",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Assault Tactical Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Raider Tactical Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "DRC Advanced Recon Chest Rig",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GIR Field Chest Rig",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "ALS Load System",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polyethylene Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "HLS-2 Heavy Backpack",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polyethylene Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "D3 Tactical Climbing Bag",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polyethylene Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GT5 Field Backpack",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Polyethylene Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 2
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "MAP Recon Backpack",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Field Hiking Backpack",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "D2 Tactical Climbing Bag",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GT1 Outdoor Climbing Bag",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Survival Tactical Backpack",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Polymer Fabric",
+          "quantity": 1,
+          "price": 16369
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Mask-1 Iron Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "H09 Anti-Riot Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GN Heavy Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Manometer",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "DICH-1 Tactical Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "High-Power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "DICH Training Helmet",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 840,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "D6 Tactical Helmet",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 840,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GT1 Tactical Helmet",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 840,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "MHS Tactical Helmet",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 840,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Elite Vest",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "High-Power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Hvk-2 Vest",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 2
+        },
+        {
+          "item": "High-Power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "FS Composite Vest",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 3
+        },
+        {
+          "item": "High-Power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Heavy Assault Vest",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Titanium Alloy",
+          "quantity": 3
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 3
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "HMP Special Ops Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "Assault Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Seasoning Set",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "DT-AVS Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Seasoning Set",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "MK-2 Tactical Vest",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Ceramic Armor",
+          "quantity": 1,
+          "price": 36603
+        },
+        {
+          "item": "Seasoning Set",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GN Heavy NV Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Lens",
+          "quantity": 1
+        },
+        {
+          "item": "High-Power Crusher",
+          "quantity": 2
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Armor Bench",
+      "item": "GN Endurance Heavy NV Helmet",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Damaged Thermal Imager",
+          "quantity": 1
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Field Med Crate",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Sterile Dressing Pack",
+          "quantity": 2
+        },
+        {
+          "item": "Stethoscope",
+          "quantity": 1
+        },
+        {
+          "item": "Purified Water",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "M1 Muscle Booster",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Small Vial",
+          "quantity": 2
+        },
+        {
+          "item": "Yogurt",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Norepinephrine",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Small Vial",
+          "quantity": 1
+        },
+        {
+          "item": "Yogurt",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "OE2 Combat Stimulant",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 720,
+      "materials": [
+        {
+          "item": "Small Vial",
+          "quantity": 2
+        },
+        {
+          "item": "Yogurt",
+          "quantity": 1
+        },
+        {
+          "item": "Purified Water",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Precision Helmet Repair Kit",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Special Steel",
+          "quantity": 2
+        },
+        {
+          "item": "Spray Paint",
+          "quantity": 3
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Precision Vest Repair Kit",
+      "quality": 5,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Special Steel",
+          "quantity": 3
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Premium Helmet Repair Combo",
+      "quality": 6,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Mobile Cable",
+          "quantity": 1
+        },
+        {
+          "item": "Aramid Fiber",
+          "quantity": 1
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Premium Vest Repair Combo",
+      "quality": 6,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Mobile Cable",
+          "quantity": 1
+        },
+        {
+          "item": "High-power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Cordless Portable Drill",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Pharmacy",
+      "item": "Stamina Activator",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Small Vial",
+          "quantity": 3
+        },
+        {
+          "item": "Surgical Forceps",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "1P-29 Russian 3x Sight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "3/7 Adjustable Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "416 Light Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 1
+        },
+        {
+          "item": "Multitool",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "416 Stable Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 1
+        },
+        {
+          "item": "Multitool",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "6/12 Expert Sniper Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "ACOG Precision 6x Scope",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Intel Document",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "AK-12 Assault Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "AKM Assault Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "AUG Assault Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Adv. Thermal Fusion Holographic Sight",
+      "quality": 6,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Damaged Thermal Imager",
+          "quantity": 1
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Advanced Multi-Caliber Suppressor",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Angled Hand Stop",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Balanced Grip Base",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Multitool",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Bastion Horizontal Compensator",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Blazing Fire Suppressor",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "CI-19 Assault Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "CR Prism Hand Stop",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Cardinal Stable Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Cobra Accuracy Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Collapsible Bipod Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Combat Red Dot Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Competition Hand Stop",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "DBAL-X2 Purple Laser-Light Combo",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        },
+        {
+          "item": "LED Light",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Dawn Angled Flashlight Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Daybreak Vertical Flashlight Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Intel Document",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Flare Tactical Flashlight",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Data: Design Blueprints",
+          "quantity": 1
+        },
+        {
+          "item": "High-power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "HAMR Combined Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Honeycomb Killflash",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Insight 3/7 Ballistic Sniper Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Invasion Core Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Invasion Rear Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "K1 Elite Bevel Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        },
+        {
+          "item": "Wire",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "LA-3C Green Laser-Light Combo",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        },
+        {
+          "item": "LED Light",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "LPVO Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 2
+        },
+        {
+          "item": "Document Fragment",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Lightning Rail Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 1
+        },
+        {
+          "item": "Multitool",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M14 Marksman Rifle",
+      "quantity": 1,
+      "minutes": 1800,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 3
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M157 Fire Control System",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M249 Light Machine Gun",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M4A1 Assault Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M7 Practical Suppressor",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Claw Hammer",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "M700 Sniper Rifle",
+      "quantity": 1,
+      "minutes": 1440,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "MRGS Skeleton Stock",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Claw Hammer",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Micro Sight Riser",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Mini Red Dot Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Multi-Purpose Tactical Riser",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "OKP-7 Reflex Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "OLIGHT Baldr Pro R Multi-Function Flashlight",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 3
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 3
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 5
+        },
+        {
+          "item": "LED Light",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "OLIGHT Odin S Tactical Flashlight",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Data: Design Blueprints",
+          "quantity": 1
+        },
+        {
+          "item": "High-power Crusher",
+          "quantity": 1
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "OLIGHT Warrior 3S Tactical Flashlight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Screwdriver",
+          "quantity": 3
+        },
+        {
+          "item": "OLIGHT Warrior 3S Collab Flashlight",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "OSIGHT Red Dot",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 2
+        },
+        {
+          "item": "Document Fragment",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Offset Combat Red Dot Sight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Offset Mini Red Dot Sight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Offset OSIGHT Red Dot",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "LED Light",
+          "quantity": 2
+        },
+        {
+          "item": "Spray Paint",
+          "quantity": 2
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Offset Panoramic Red Dot Sight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Offset XRO Quick Response Sight",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Optical Sniper 8x Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "P90 Submachine Gun",
+      "quantity": 1,
+      "minutes": 2880,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "PEQ-2 Red Laser-Light Combo",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        },
+        {
+          "item": "LED Light",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "PERST-7 Blue Laser-Light Combo",
+      "quality": 4,
+      "quantity": 4,
+      "minutes": 300,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        },
+        {
+          "item": "LED Light",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "PKM General Machine Gun",
+      "quantity": 1,
+      "minutes": 1200,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "PSG-1 Marksman Rifle",
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Panoramic Red Dot Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Box of Nails",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Phantom Vertical Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Phase Combat Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Intel Document",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Poseidon Flash Hider",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Prism Universal 2x Optic",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "QCQ171 Submachine Gun",
+      "quantity": 1,
+      "minutes": 2880,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "QJB201 Light Machine Gun",
+      "quantity": 1,
+      "minutes": 1200,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 2
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "RK-0 Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "RK-3 Rear Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        },
+        {
+          "item": "Corrugated Tube",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Recon 1.5/5 Adjustable Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 2
+        },
+        {
+          "item": "Multitool",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Resonant Ergonomic Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Intel Document",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Resonant MKII Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Russian Accuracy 2x Scope",
+      "quality": 2,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Document Fragment",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "SCAR-H Battle Rifle",
+      "quantity": 1,
+      "minutes": 1800,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "SKS Marksman Rifle",
+      "quantity": 2,
+      "minutes": 1920,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Angle Grinder",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "SR-3M Compact Assault Rifle",
+      "quantity": 1,
+      "minutes": 2880,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Duct Tape",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "SVD Sniper Rifle",
+      "quantity": 1,
+      "minutes": 960,
+      "materials": [
+        {
+          "item": "Tool Kit",
+          "quantity": 1,
+          "price": 25614
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Sandstorm Vertical Compensator",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Secret Order Bevel Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Shadow Buffer Tube Stock",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Shadow Rail Stock",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Handsaw",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Claw Hammer",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Silent Suppressor",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Skeleton Sniper Stock",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Spiral Fire Flash Hider",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Stable Grip Base",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 480,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Multitool",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Tactical Angled Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        },
+        {
+          "item": "Wire",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Tactical Vertical Foregrip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Titanium Contest Muzzle Brake",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "UR Spec Ops Tactical Stock",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Viewpoint 3x Scope",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "Whisper Tactical Suppressor",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 420,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Sledgehammer",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 2
+        },
+        {
+          "item": "Needle-Nose Pliers",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "White Phosphor Thermal Scope",
+      "quality": 6,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Damaged Thermal Imager",
+          "quantity": 2
+        },
+        {
+          "item": "Firearm Parts",
+          "quantity": 3
+        },
+        {
+          "item": "High-precision Digital Caliper",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "X25U Angled Combat Grip",
+      "quality": 4,
+      "quantity": 1,
+      "minutes": 240,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "XCOG Assault 3.5x Scope",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Firearm Parts",
+          "quantity": 1
+        },
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "workshop": "Cyber Warfare Division",
+      "item": "XRO Quick Response Sight",
+      "quality": 3,
+      "quantity": 1,
+      "minutes": 360,
+      "materials": [
+        {
+          "item": "Wood Board",
+          "quantity": 1
+        },
+        {
+          "item": "LED Light",
+          "quantity": 1
+        },
+        {
+          "item": "Super Glue",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "metadelta-web",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--env-file=C:\\Code Work\\MetaDeltaBot\\.env", "C:\\Code Work\\MetaDeltaWeb\\src\\server.js"],
+      "port": 3000
+    }
+  ]
+}

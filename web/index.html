@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaDelta — คำแนะนำการคราฟ</title>
+  <meta name="description" content="คราฟอะไรใน Black Site ได้กำไรต่อชั่วโมงสูงสุด คำนวณจากราคาตลาดล่าสุด">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo" aria-hidden="true">◆</span><span>META<b>DELTA</b></span></div>
+    <div class="status" id="status" role="status">กำลังโหลด…</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="panel-head">
+        <h1>Black Site Workshop</h1>
+        <span class="date" id="date"></span>
+      </div>
+      <div class="bar"><h2>คราฟที่แนะนำ</h2></div>
+      <div class="grid" id="grid">
+        <p class="loading">กำลังดึงราคาล่าสุด… ครั้งแรกอาจใช้เวลาประมาณ 30 วินาที</p>
+      </div>
+      <p class="hint" id="hint">กำไรต่อชั่วโมง = (ราคาขายหลังหักภาษี − ต้นทุนวัตถุดิบ) ÷ เวลาผลิต • กดอันดับอื่นเพื่อดูรายละเอียด</p>
+    </section>
+  </main>
+
+  <footer>MetaDelta เป็นเครื่องมือที่ทำขึ้นเอง ไม่ใช่เว็บไซต์ทางการของ Delta Force • ราคาจาก deltaforceapi.com</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

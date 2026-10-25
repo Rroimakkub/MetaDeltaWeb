@@ -1,0 +1,13 @@
+{
+  "name": "metadelta-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MetaDelta website: Delta Force Black Site craft recommendations from live market prices",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js"
+  },
+  "engines": {
+    "node": ">=22.9"
+  }
+}

@@ -1,0 +1,169 @@
+:root {
+  --bg: #0a0f12;
+  --panel: #0e161a;
+  --card: #121d22;
+  --line: #22333a;
+  --line-strong: #30474f;
+  --text: #e6edf0;
+  --muted: #8a9ba2;
+  --accent: #38e0a8;
+  --profit: #4ee28c;
+  --loss: #ff6464;
+  --price: #ffc65c;
+  --t1: #a8adb3;
+  --t2: #62d36d;
+  --t3: #4fa7ff;
+  --t4: #b67dff;
+  --t5: #ffb547;
+  --t6: #ff5d5d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: 'Chakra Petch', 'Segoe UI', 'Leelawadee UI', 'Noto Sans Thai', sans-serif;
+  background:
+    radial-gradient(1100px 500px at 50% -10%, #12333c66, transparent),
+    repeating-linear-gradient(0deg, #ffffff05 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(90deg, #ffffff05 0 1px, transparent 1px 48px),
+    var(--bg);
+}
+
+.topbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 600; letter-spacing: 3px; }
+.brand .logo, .brand b { color: var(--accent); }
+.status { color: var(--muted); font-size: 13px; }
+.status.error { color: var(--loss); }
+
+/* Panel with bracketed corners, like a tactical HUD frame. */
+.panel {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto 16px;
+  padding-bottom: 16px;
+  background: linear-gradient(#0e161ae6, #0b1215e6);
+  border: 1px solid var(--line);
+}
+.panel::before, .panel::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--accent);
+}
+.panel::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.panel::after { right: -1px; bottom: -1px; border-left: 0; border-top: 0; }
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #1a292f, #111b20);
+  border-bottom: 1px solid var(--line);
+}
+.panel-head h1 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+.date { color: var(--muted); font-size: 13px; }
+.bar {
+  margin: 14px 16px 12px;
+  text-align: center;
+  background: linear-gradient(90deg, transparent, #1b2b31 20%, #1b2b31 80%, transparent);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+.bar h2 { margin: 0; padding: 5px; font-size: 14px; font-weight: 600; letter-spacing: 1px; }
+
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 0 16px; }
+.loading { grid-column: 1 / -1; margin: 0; padding: 60px 16px; text-align: center; color: var(--muted); }
+
+/* One column per workshop: the featured craft, its materials, then the other top crafts. */
+.ws { display: flex; flex-direction: column; min-width: 0; background: var(--card); border: 1px solid var(--line); }
+.ws-name {
+  padding: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+.feature { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.art {
+  position: relative;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tier) 6%, transparent), color-mix(in srgb, var(--tier) 34%, transparent));
+  border-bottom: 2px solid var(--tier);
+}
+.art img { max-width: 82%; max-height: 124px; object-fit: contain; filter: drop-shadow(0 6px 12px #000a); }
+.tier-tag {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 0 6px;
+  font-size: 11px;
+  color: var(--tier);
+  background: #000a;
+  border: 1px solid var(--tier);
+}
+.item-name { margin: 0; min-height: 40px; text-align: center; font-size: 16px; font-weight: 700; line-height: 1.25; color: var(--tier); }
+.meta { margin: -4px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
+.rate { text-align: center; }
+.rate small { display: block; font-size: 12px; color: var(--muted); }
+.rate strong { font-size: 28px; color: var(--profit); font-variant-numeric: tabular-nums; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 12px; }
+.facts div { padding: 6px; background: #0b1215; border: 1px solid var(--line); }
+.facts span { display: block; color: var(--muted); }
+.facts b { font-variant-numeric: tabular-nums; }
+
+.section-title { margin: 4px 0 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: var(--muted); }
+.mat { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; border-bottom: 1px dashed #ffffff12; }
+.mat img, .mat .ph { flex: none; width: 30px; height: 30px; object-fit: contain; background: #0b1215; border: 1px solid var(--line); }
+.mat .n { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.mat .q { color: var(--muted); }
+.mat .p { color: var(--price); font-variant-numeric: tabular-nums; }
+.source { margin-left: 4px; padding: 0 4px; font-size: 10px; color: var(--muted); border: 1px solid var(--line-strong); }
+
+.others { margin-top: auto; padding: 0 12px 12px; }
+.other {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px;
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.other:hover, .other[aria-pressed='true'] { background: #ffffff08; border-color: var(--line-strong); }
+.other:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.other .rank { width: 16px; color: var(--muted); }
+.other img, .other .ph { flex: none; width: 26px; height: 26px; object-fit: contain; }
+.other .n { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--tier); }
+.other .r { font-size: 12px; color: var(--profit); font-variant-numeric: tabular-nums; }
+.empty { padding: 48px 12px; text-align: center; color: var(--muted); }
+
+.hint { margin: 12px 16px 0; text-align: center; font-size: 12px; color: var(--muted); }
+footer { padding: 8px 16px 24px; text-align: center; font-size: 12px; color: #5d6b70; }
+
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .panel { margin: 0 12px 16px; }
+}
