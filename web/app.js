@@ -1,4 +1,6 @@
 // Renders /api/crafts: one column per Black Site workshop with its best craft and the next best ones.
+import { el, fact, formatNumber } from './ui.js';
+
 // The server re-prices at most every 10 minutes and answers checks from its cache,
 // so checking every minute is cheap and shows new prices soon after they are ready.
 const REFRESH_MS = 60 * 1000;
@@ -16,20 +18,11 @@ let data = null;
 const selected = new Map(); // workshop name -> craftKey of the craft shown in its card
 const craftKey = (craft) => `${craft.item}|${craft.tier}`;
 
-const formatNumber = (value) => new Intl.NumberFormat('en-US').format(Math.round(value));
 const formatDuration = (minutes) => {
   if (minutes < 60) return `${minutes} นาที`;
   const hours = Math.floor(minutes / 60);
   return minutes % 60 ? `${hours} ชม. ${minutes % 60} นาที` : `${hours} ชม.`;
 };
-
-// Builds elements with textContent only, so names from the API are never parsed as HTML.
-function el(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text != null) node.textContent = text;
-  return node;
-}
 
 function icon(src, alt) {
   if (!src || !src.startsWith(ICON_ORIGIN)) return el('span', 'ph');
@@ -46,12 +39,6 @@ const withTier = (node, tier) => {
   node.style.setProperty('--tier', TIER_COLORS[tier] ?? 'var(--t1)');
   return node;
 };
-
-function fact(label, value) {
-  const box = el('div');
-  box.append(el('span', null, label), el('b', null, value));
-  return box;
-}
 
 function featureCard(craft) {
   const card = withTier(el('div', 'feature'), craft.tier);

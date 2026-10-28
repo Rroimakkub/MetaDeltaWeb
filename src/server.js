@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { calculateCraft } from './api.js';
 import { getConfig } from './config.js';
 import { getCachedCraftRecommendations } from './crafting.js';
+import { getPlayerReport, getSeasons, isSeasonChoice, PlayerNotFoundError } from './player.js';
 
 // MetaDelta website: Black Site craft recommendations ranked by profit per hour from live market prices.
 const config = getConfig();
@@ -16,13 +17,16 @@ const WORKSHOPS = ['Cyber Warfare Division', 'Workbench', 'Pharmacy', 'Armor Ben
 // The only files the site serves; request paths never reach the file system directly.
 const FILES = {
   '/': ['index.html', 'text/html; charset=utf-8'],
+  '/player': ['player.html', 'text/html; charset=utf-8'],
   '/style.css': ['style.css', 'text/css; charset=utf-8'],
+  '/ui.js': ['ui.js', 'text/javascript; charset=utf-8'],
   '/app.js': ['app.js', 'text/javascript; charset=utf-8'],
+  '/player.js': ['player.js', 'text/javascript; charset=utf-8'],
 };
 const HEADERS = {
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'no-referrer',
-  'Content-Security-Policy': "default-src 'self'; img-src 'self' https://cdn.deltaforceapi.com data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-ancestors 'none'",
+  'Content-Security-Policy': "default-src 'self'; img-src 'self' https://cdn.deltaforceapi.com https://www.playdeltaforce.com data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-ancestors 'none'",
 };
 
 const shapeCraft = (craft) => {
@@ -70,24 +74,57 @@ async function craftsPayload() {
   return payload.body;
 }
 
+// body: an already serialized JSON string, or a value to serialize.
+const sendJson = (response, status, body) => response
+  .writeHead(status, { ...HEADERS, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-cache' })
+  .end(typeof body === 'string' ? body : JSON.stringify(body));
+
 async function handleRequest(request, response) {
   // Request targets like "//x:99999" are not valid URLs.
   if (!URL.canParse(request.url, 'http://localhost')) {
     response.writeHead(400, { ...HEADERS, 'Content-Type': 'text/plain; charset=utf-8' }).end('Bad request');
     return;
   }
-  const { pathname } = new URL(request.url, 'http://localhost');
+  const { pathname, searchParams } = new URL(request.url, 'http://localhost');
   if (request.method !== 'GET') {
     response.writeHead(405, HEADERS).end();
     return;
   }
   if (pathname === '/api/crafts') {
     try {
-      const body = await craftsPayload();
-      response.writeHead(200, { ...HEADERS, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-cache' }).end(body);
+      sendJson(response, 200, await craftsPayload());
     } catch (error) {
       console.error('Could not price the recipes:', error.message);
-      response.writeHead(503, { ...HEADERS, 'Content-Type': 'application/json; charset=utf-8' }).end(JSON.stringify({ error: 'ดึงราคาไม่สำเร็จ ลองใหม่อีกครั้งภายหลัง' }));
+      sendJson(response, 503, { error: 'ดึงราคาไม่สำเร็จ ลองใหม่อีกครั้งภายหลัง' });
+    }
+    return;
+  }
+  if (pathname === '/api/seasons') {
+    try {
+      const { seasons, current } = await getSeasons(config);
+      sendJson(response, 200, { current: current?.id ?? null, seasons: seasons.map(({ id, number, name }) => ({ id, number, name })) });
+    } catch (error) {
+      console.error('Could not load the seasons:', error.message);
+      sendJson(response, 503, { error: 'ดึงรายชื่อซีซันไม่สำเร็จ' });
+    }
+    return;
+  }
+  if (pathname === '/api/player') {
+    const query = (searchParams.get('q') ?? '').trim();
+    const season = searchParams.get('season') ?? '';
+    if (!query || query.length > 64 || !isSeasonChoice(season)) {
+      sendJson(response, 400, { error: 'ใส่ชื่อในเกมหรือ Delta Force ID' });
+      return;
+    }
+    try {
+      sendJson(response, 200, await getPlayerReport(config, query, season));
+    } catch (error) {
+      if (error instanceof PlayerNotFoundError) {
+        sendJson(response, 404, { error: `ไม่พบผู้เล่น "${query}" ลองใช้ชื่อในเกมแบบตรงตัว หรือ Delta Force ID` });
+        return;
+      }
+      console.error(`Could not look up player ${JSON.stringify(query)}:`, error.message);
+      sendJson(response, 503, { error: 'ดึงข้อมูลผู้เล่นไม่สำเร็จ ลองใหม่อีกครั้งภายหลัง' });
     }
     return;
   }

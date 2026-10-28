@@ -34,6 +34,14 @@ npm start
 
 `data/recipes.json` คัดลอกมาจากโปรเจกต์บอต ถ้าแก้สูตรในบอตแล้วอยากให้เว็บใช้ไฟล์เดียวกันโดยไม่ต้องคัดลอกซ้ำ ให้ตั้ง `RECIPES_PATH=../MetaDeltaBot/data/recipes.json`
 
+## สถิติผู้เล่น
+
+หน้า `/player` ค้นผู้เล่นด้วยชื่อในเกมหรือ Delta Force ID แล้วแสดงสถิติโหมด Operations จัดกลุ่มแบบหน้า My Data ของเว็บทางการ (แรงก์และคลัง, ข้อมูลเศรษฐกิจ, การต่อสู้, ทีม) เลือกดูรายซีซันหรือตลอดกาลได้ หน้า My Data ของเว็บทางการดูได้เฉพาะบัญชีที่ล็อกอิน แต่หน้านี้ค้นผู้เล่นคนไหนก็ได้
+
+- ข้อมูลมาจาก DeltaForceAPI การค้นหาแต่ละครั้งใช้ API 4–6 ครั้ง เว็บจึงเก็บผลไว้ 5 นาที
+- ชื่อและรูปแรงก์ใช้ตารางคะแนนเดียวกับเว็บทางการ (`ranks_en.js`) รูปโหลดจาก playdeltaforce.com
+- ไม่มี Earnings/Failures, Task Rewards, แรงก์สูงสุด และประวัติรายแมตช์ เพราะ DeltaForceAPI ไม่มีข้อมูลเหล่านี้
+
 ## ขึ้นเซิร์ฟเวอร์
 
 บนเครื่องเดียวกับบอต (เช่น VPS ที่รันบอตอยู่):
@@ -48,9 +56,10 @@ pm2 start npm --name metadelta-web -- start && pm2 save
 
 ## โครงสร้าง
 
-- `src/server.js` — เว็บเซิร์ฟเวอร์ (หน้าเว็บและ `/api/crafts`)
+- `src/server.js` — เว็บเซิร์ฟเวอร์ (หน้าเว็บ, `/api/crafts`, `/api/player`, `/api/seasons`)
 - `src/crafting.js` — คำนวณกำไรของทุกสูตรจากราคาตลาด
+- `src/player.js` — ดึงสถิติ Operations ของผู้เล่น
 - `src/api.js` — เรียก DeltaForceAPI (ราคาและรายชื่อไอเทม)
-- `web/` — หน้าเว็บ (`index.html`, `style.css`, `app.js`)
+- `web/` — หน้าเว็บ: หน้าคราฟ (`index.html`, `app.js`), หน้าผู้เล่น (`player.html`, `player.js`), ของที่ใช้ร่วมกัน (`style.css`, `ui.js`)
 
 MetaDelta เป็นเครื่องมือที่ทำขึ้นเอง ไม่ใช่เว็บไซต์ทางการของ Delta Force
