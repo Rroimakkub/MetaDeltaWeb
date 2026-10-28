@@ -1,5 +1,7 @@
 // Renders /api/crafts: one column per Black Site workshop with its best craft and the next best ones.
-const REFRESH_MS = 10 * 60 * 1000;
+// The server re-prices at most every 10 minutes and answers checks from its cache,
+// so checking every minute is cheap and shows new prices soon after they are ready.
+const REFRESH_MS = 60 * 1000;
 const TIER_COLORS = { 1: 'var(--t1)', 2: 'var(--t2)', 3: 'var(--t3)', 4: 'var(--t4)', 5: 'var(--t5)', 6: 'var(--t6)' };
 const SOURCE_LABELS = { crafted: 'คราฟเอง', fixed: 'ราคาประเมิน' };
 const ICON_ORIGIN = 'https://cdn.deltaforceapi.com/';
@@ -11,7 +13,8 @@ const hint = document.getElementById('hint');
 const hintText = hint.textContent;
 
 let data = null;
-const selected = new Map(); // workshop name -> index of the craft shown in its card
+const selected = new Map(); // workshop name -> craftKey of the craft shown in its card
+const craftKey = (craft) => `${craft.item}|${craft.tier}`;
 
 const formatNumber = (value) => new Intl.NumberFormat('en-US').format(Math.round(value));
 const formatDuration = (minutes) => {
@@ -89,7 +92,8 @@ function workshopColumn(workshop) {
     column.append(el('p', 'empty', 'ไม่มีสูตรที่ได้กำไรตอนนี้'));
     return column;
   }
-  const current = Math.min(selected.get(workshop.name) ?? 0, workshop.crafts.length - 1);
+  // Matched by item rather than rank, so a refresh that re-ranks the list keeps showing the same craft.
+  const current = Math.max(0, workshop.crafts.findIndex((craft) => craftKey(craft) === selected.get(workshop.name)));
   column.append(featureCard(workshop.crafts[current]));
 
   if (workshop.crafts.length > 1) {
@@ -101,8 +105,11 @@ function workshopColumn(workshop) {
       button.setAttribute('aria-pressed', String(index === current));
       button.append(el('span', 'rank', `${index + 1}.`), icon(craft.icon, ''), el('span', 'n', craft.item), el('span', 'r', `${formatNumber(craft.profitPerHour)}/ชม.`));
       button.addEventListener('click', () => {
-        selected.set(workshop.name, index);
-        column.replaceWith(workshopColumn(workshop));
+        selected.set(workshop.name, craftKey(craft));
+        const next = workshopColumn(workshop);
+        column.replaceWith(next);
+        // The clicked button was replaced too; focus its copy so keyboard users stay in place.
+        next.querySelectorAll('.other')[index].focus();
       });
       others.append(button);
     });
@@ -130,6 +137,11 @@ async function load() {
     const response = await fetch('/api/crafts', { cache: 'no-store' });
     const body = await response.json();
     if (!response.ok) throw new Error(body.error ?? `HTTP ${response.status}`);
+    // Most checks get the same prices back; re-rendering then would only reset the page under the user.
+    if (body.updatedAt === data?.updatedAt) {
+      showStatus();
+      return;
+    }
     data = body;
     render();
   } catch (error) {

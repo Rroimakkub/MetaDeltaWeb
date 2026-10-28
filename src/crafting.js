@@ -165,15 +165,24 @@ async function getCraftRecommendations(config) {
   return { groups, skipped };
 }
 
-let cache = null;
+let latest = null; // the last pass that succeeded: { groups, skipped, pricedAt }
+let running = null; // the pass in flight
+let failure = null; // the last pass that failed: { error, at }
 
-// Pricing every recipe takes ~230 API calls and ~30 seconds, so results are reused for 10 minutes.
-// A failed pass is kept for a minute so that during an outage each visitor doesn't start another ~230 calls.
-export function getCachedCraftRecommendations(config) {
-  if (!cache || Date.now() > cache.expiresAt) {
-    const result = getCraftRecommendations(config);
-    cache = { expiresAt: Date.now() + CACHE_MS, result };
-    result.catch(() => { if (cache?.result === result) cache.expiresAt = Date.now() + RETRY_MS; });
+// Pricing every recipe takes ~230 API calls and ~30 seconds, so a result counts as fresh for 10 minutes.
+// After that the last result is still returned at once while a new pass runs in the background,
+// so only the very first visitor waits and an outage keeps showing the last prices instead of an error.
+// A failed pass is retried after a minute so that during an outage visitors don't each start ~230 calls.
+export async function getCachedCraftRecommendations(config) {
+  const now = Date.now();
+  const fresh = latest && now - latest.pricedAt <= CACHE_MS;
+  const waiting = failure && now - failure.at < RETRY_MS;
+  if (!fresh && !running && !waiting) {
+    running = getCraftRecommendations(config)
+      .then((result) => { latest = { ...result, pricedAt: Date.now() }; failure = null; }, (error) => { failure = { error, at: Date.now() }; })
+      .finally(() => { running = null; });
   }
-  return cache.result;
+  if (!latest && running) await running;
+  if (latest) return latest;
+  throw failure.error;
 }

@@ -42,18 +42,22 @@ const shapeCraft = (craft) => {
   };
 };
 
-// Prices are cached for 10 minutes; the JSON is rebuilt only when that cache refreshes.
+// The JSON is rebuilt only when a new pricing pass has finished.
 let payload = { result: null, body: null };
 async function craftsPayload() {
-  const result = getCachedCraftRecommendations(config);
-  const { groups, skipped } = await result;
+  const result = await getCachedCraftRecommendations(config);
   if (payload.result !== result) {
+    const { groups, skipped, pricedAt } = result;
+    if (skipped.length) {
+      const lines = skipped.map(({ recipe, reasons }) => `  ${recipe.workshop} / ${recipe.item}${recipe.quality == null ? '' : ` T${recipe.quality}`}: ${reasons.join('; ')}`);
+      console.warn(`Skipped ${skipped.length} recipes that could not be priced:\n${lines.join('\n')}`);
+    }
     const byWorkshop = new Map(groups.map(({ workshop, crafts }) => [workshop, crafts]));
     const names = [...WORKSHOPS, ...groups.map(({ workshop }) => workshop).filter((name) => !WORKSHOPS.includes(name))];
     payload = {
       result,
       body: JSON.stringify({
-        updatedAt: new Date().toISOString(),
+        updatedAt: new Date(pricedAt).toISOString(),
         sellTaxPercent: config.sellTaxPercent,
         skipped: skipped.length,
         workshops: names.map((name) => ({
