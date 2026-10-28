@@ -46,6 +46,12 @@ body {
 .brand .logo, .brand b { color: var(--accent); }
 .status { color: var(--muted); font-size: 13px; }
 .status.error { color: var(--loss); }
+.nav { display: flex; gap: 4px; }
+.nav a { padding: 5px 10px; font-size: 13px; color: var(--muted); text-decoration: none; border: 1px solid transparent; }
+.nav a:hover { color: var(--text); }
+.nav a[aria-current='page'] { color: var(--accent); background: #ffffff08; border-color: var(--line-strong); }
+.nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* Panel with bracketed corners, like a tactical HUD frame. */
 .panel {
@@ -158,6 +164,31 @@ body {
 .other .n { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--tier); }
 .other .r { font-size: 12px; color: var(--profit); font-variant-numeric: tabular-nums; }
 .empty { padding: 48px 12px; text-align: center; color: var(--muted); }
+
+/* Player page: a search row, the player's name, then columns like the workshops. */
+.search { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 16px 0; }
+.search input, .search select, .search button {
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+}
+.search input { flex: 1 1 220px; min-width: 0; }
+.search select { flex: 0 1 auto; min-width: 0; }
+.search button { font-weight: 600; color: var(--bg); background: var(--accent); border-color: var(--accent); cursor: pointer; }
+.search :focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.player-head { margin: 16px 16px 0; text-align: center; }
+.player-head h2 { margin: 0; font-size: 22px; letter-spacing: 0.5px; overflow-wrap: anywhere; }
+.player-head .meta { margin-top: 4px; }
+.summary { margin: 6px 0 0; font-size: 13px; }
+.note { margin: 8px 16px 0; text-align: center; font-size: 12px; color: var(--price); }
+.rate strong.wide { font-size: 22px; }
+.stat-list { margin: 0; }
+.stat-list div { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px dashed #ffffff12; }
+.stat-list dt { color: var(--muted); }
+.stat-list dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
 
 .hint { margin: 12px 16px 0; text-align: center; font-size: 12px; color: var(--muted); }
 footer { padding: 8px 16px 24px; text-align: center; font-size: 12px; color: #5d6b70; }

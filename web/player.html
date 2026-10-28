@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaDelta — สถิติผู้เล่น</title>
+  <meta name="description" content="สถิติโหมด Operations ของผู้เล่น Delta Force แบบหน้า My Data ค้นด้วยชื่อในเกมหรือ Delta Force ID">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo" aria-hidden="true">◆</span><span>META<b>DELTA</b></span></div>
+    <nav class="nav" aria-label="เมนู">
+      <a href="/">คราฟ Black Site</a>
+      <a href="/player" aria-current="page">สถิติผู้เล่น</a>
+    </nav>
+    <div class="status" id="status" role="status"></div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="panel-head">
+        <h1>Operations — สถิติผู้เล่น</h1>
+        <span class="date" id="period"></span>
+      </div>
+      <form class="search" id="search" action="/player" method="get" role="search">
+        <label class="sr-only" for="q">ชื่อในเกมหรือ Delta Force ID</label>
+        <input id="q" name="q" type="search" placeholder="ชื่อในเกม หรือ Delta Force ID" maxlength="64" autocomplete="off" required>
+        <label class="sr-only" for="season">ซีซัน</label>
+        <select id="season" name="season">
+          <option value="">ซีซันปัจจุบัน</option>
+          <option value="lifetime">ตลอดกาล</option>
+        </select>
+        <button type="submit">ค้นหา</button>
+      </form>
+      <div id="result">
+        <p class="loading">ค้นหาผู้เล่นเพื่อดูสถิติโหมด Operations แบบหน้า My Data</p>
+      </div>
+      <p class="hint">ข้อมูลจาก deltaforceapi.com • หน้า My Data ของเว็บทางการดูได้เฉพาะบัญชีที่ล็อกอิน หน้านี้ค้นผู้เล่นคนไหนก็ได้ • ไม่มี Earnings/Failures, Task Rewards, แรงก์สูงสุด และประวัติรายแมตช์ เพราะ API ไม่มีข้อมูลเหล่านี้</p>
+    </section>
+  </main>
+
+  <footer>MetaDelta เป็นเครื่องมือที่ทำขึ้นเอง ไม่ใช่เว็บไซต์ทางการของ Delta Force • ข้อมูลจาก deltaforceapi.com</footer>
+  <script type="module" src="/player.js"></script>
+</body>
+</html>
