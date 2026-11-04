@@ -11,6 +11,11 @@ const MAX_REPORTS = 500;
 const FRESH_RECORD_MS = 10 * 60 * 1000;
 const FRESH_RETRIES = 2;
 const FRESH_RETRY_DELAY_MS = 4000;
+const DAY_MS = 24 * 60 * 60 * 1000;
+const STASH_DAYS = 7;
+// The API records a stash only about every 15 hours, so history from before the chart supplies the value going into it.
+const STASH_LOOKBACK_DAYS = 14;
+const MAX_HISTORY_PAGES = 5;
 const STAT_FIELDS = [
   'playTime', 'matchesPlayed', 'matchesExtracted', 'matchesLost', 'matchesQuit', 'extractionRate',
   'extractedAssets', 'extractedTeammateAssets', 'extractedMandlebricks',
@@ -65,6 +70,38 @@ async function findPlayer(config, query) {
   }
 }
 
+async function fetchStashHistory(config, playerId) {
+  const startTime = new Date(Date.now() - (STASH_DAYS + STASH_LOOKBACK_DAYS) * DAY_MS).toISOString();
+  const records = [];
+  let pageToken;
+  for (let page = 0; page < MAX_HISTORY_PAGES; page++) {
+    const result = await callApi(config, 'GetPlayerOperationHistoricalStashValue', { playerId, startTime, pageSize: 100, ...(pageToken && { pageToken }) });
+    records.push(...(result.stashes ?? []));
+    pageToken = result.nextPageToken;
+    if (!pageToken) break;
+  }
+  return records;
+}
+
+// The stash over the last 7 days: its value going into them (the last record before, if any) and each record since.
+// The current stash is usually also the newest history record, so points are kept one per timestamp.
+function stashChart(history, stash, now = Date.now()) {
+  const start = now - STASH_DAYS * DAY_MS;
+  const points = [...new Map([...history, ...(stash ? [stash] : [])]
+    .map((entry) => [new Date(entry.createdAt).getTime(), Number(entry.assetsNet ?? 0)])
+    .filter(([at]) => !Number.isNaN(at))).entries()]
+    .sort(([a], [b]) => a - b);
+  const before = points.filter(([at]) => at < start);
+  const during = points.filter(([at]) => at >= start && at <= now);
+  if (!before.length && !during.length) return null;
+  return {
+    start: new Date(start).toISOString(),
+    end: new Date(now).toISOString(),
+    baseline: before.at(-1)?.[1] ?? null,
+    points: during.map(([at, value]) => ({ at: new Date(at).toISOString(), value })),
+  };
+}
+
 const shapeSeason = (season) => season && { id: season.id, number: season.number ?? null, name: season.name ?? null };
 const shapeStats = (stats) => ({ ...Object.fromEntries(STAT_FIELDS.map((key) => [key, Number(stats[key] ?? 0)])), updatedAt: stats.updatedAt ?? null });
 
@@ -78,10 +115,15 @@ async function fetchPlayerReport(config, query, seasonChoice) {
   const bothFor = (seasonOfStats) => Promise.all([statsFor(false, seasonOfStats), statsFor(true, seasonOfStats)]);
 
   // The rank card shows the chosen season's ranked points, or the current season's next to lifetime stats.
-  let [[unranked, ranked], stash, currentRanked] = await Promise.all([
+  let [[unranked, ranked], stash, currentRanked, stashHistory] = await Promise.all([
     bothFor(season),
     optional(callApi(config, 'GetPlayerOperationStashValue', { playerId: player.id })).then((response) => response?.stash ?? null),
     !season && current ? statsFor(true, current) : null,
+    // The chart is an extra: if its history can't be loaded, show the stats without it.
+    fetchStashHistory(config, player.id).catch((error) => {
+      if (error.status !== 404) console.warn(`Could not load the stash history of ${player.name}:`, error.message);
+      return [];
+    }),
   ]);
 
   // The API fetches a player from the game the first time anyone looks them up, so a brand-new record
@@ -124,6 +166,7 @@ async function fetchPlayerReport(config, query, seasonChoice) {
       collection: Number(stash.assetsCollection ?? 0),
       recordedAt: stash.createdAt ?? null,
     },
+    stashChart: stashChart(stashHistory, stash),
   };
 }
 

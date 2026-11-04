@@ -115,6 +115,90 @@ function rankColumn({ rank, stash }) {
   return column;
 }
 
+const SVG = 'http://www.w3.org/2000/svg';
+const DAY_MS = 24 * 60 * 60 * 1000;
+const BANGKOK_OFFSET_MS = 7 * 60 * 60 * 1000; // Thailand has no daylight saving time.
+
+function svg(tag, attributes, text) {
+  const node = document.createElementNS(SVG, tag);
+  for (const [name, value] of Object.entries(attributes)) node.setAttribute(name, value);
+  if (text != null) node.textContent = text;
+  return node;
+}
+
+const formatSigned = (change) => `${change >= 0 ? '+' : '−'}${formatCompact(Math.abs(change))}`;
+const formatWhen = (at) => new Date(at).toLocaleString('th-TH', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Bangkok' });
+
+// The stash over the last 7 days as a step line: a stash only changes when the API records it (about every
+// 15 hours), so each value holds until the next record and up to now. A ring marks every record.
+function stashChartPanel(chart) {
+  const panel = el('div', 'chart-panel');
+  if (!chart) {
+    panel.append(el('p', 'empty', 'API ยังไม่มีประวัติมูลค่าคลังของผู้เล่นนี้'));
+    return panel;
+  }
+  const start = Date.parse(chart.start);
+  const end = Date.parse(chart.end);
+  const records = chart.points.map((point) => ({ at: Date.parse(point.at), value: point.value }));
+  const opening = chart.baseline ?? records[0].value;
+  const latest = records.at(-1)?.value ?? opening;
+  const line = [{ at: chart.baseline == null ? records[0].at : start, value: opening }, ...records, { at: end, value: latest }];
+
+  const change = latest - opening;
+  const head = el('div', 'chart-head');
+  const since = chart.baseline == null ? ` (นับตั้งแต่ ${formatWhen(records[0].at)})` : '';
+  const percent = opening ? ` (${change >= 0 ? '+' : '−'}${Math.abs((change / opening) * 100).toFixed(1)}%)` : '';
+  const delta = el('b', change > 0 ? 'up' : change < 0 ? 'down' : null, `${formatSigned(change)}${percent}`);
+  const summary = el('span', null, '7 วัน ');
+  summary.append(delta, since);
+  head.append(el('span', null, `ล่าสุด ${formatCompact(latest)}`), summary);
+
+  // Drawn at the page's actual width (panel margins and padding taken off) so its text stays 12px on a phone.
+  const width = Math.max(300, Math.min(1100, result.clientWidth - 58));
+  const narrow = width < 560;
+  const [height, left, right, top, bottom] = [narrow ? 200 : 240, 56, 16, 14, 30];
+  let [low, high] = [Math.min(...line.map((point) => point.value)), Math.max(...line.map((point) => point.value))];
+  const pad = (high - low) * 0.1 || Math.abs(high) * 0.05 || 1;
+  [low, high] = [low - pad, high + pad];
+  const x = (at) => left + ((at - start) / (end - start)) * (width - left - right);
+  const y = (value) => top + ((high - value) / (high - low)) * (height - top - bottom);
+  const chartSvg = svg('svg', { viewBox: `0 0 ${width} ${height}`, role: 'img', 'aria-label': `มูลค่าคลัง 7 วัน ล่าสุด ${formatCompact(latest)} เปลี่ยน ${formatSigned(change)}` });
+
+  for (let i = 0; i <= 3; i++) {
+    const value = low + ((high - low) * i) / 3;
+    chartSvg.append(
+      svg('line', { class: 'grid-line', x1: left, x2: width - right, y1: y(value), y2: y(value) }),
+      svg('text', { x: left - 6, y: y(value) + 4, 'text-anchor': 'end' }, formatCompact(value)),
+    );
+  }
+  // A tick at each midnight in Thailand, labelled with that day.
+  for (let day = Math.ceil((start + BANGKOK_OFFSET_MS) / DAY_MS) * DAY_MS - BANGKOK_OFFSET_MS; day < end; day += DAY_MS) {
+    // On a phone the days are too close for weekday names, so only the date is shown.
+    const label = new Date(day).toLocaleDateString('th-TH', { ...(!narrow && { weekday: 'short' }), day: 'numeric', timeZone: 'Asia/Bangkok' });
+    chartSvg.append(
+      svg('line', { class: 'grid-line', x1: x(day), x2: x(day), y1: top, y2: height - bottom }),
+      svg('text', { x: Math.min(x(day) + 4, width - right - (narrow ? 24 : 40)), y: height - 10 }, label),
+    );
+  }
+
+  let path = `M${x(line[0].at)},${y(line[0].value)}`;
+  for (const point of line.slice(1)) path += `H${x(point.at)}V${y(point.value)}`;
+  chartSvg.append(
+    svg('path', { class: 'chart-area', d: `${path}V${height - bottom}H${x(line[0].at)}Z` }),
+    svg('path', { class: 'chart-line', d: path }),
+  );
+  records.forEach((record, index) => {
+    const previous = index ? records[index - 1].value : chart.baseline;
+    const ring = svg('circle', { class: 'chart-dot', cx: x(record.at), cy: y(record.value), r: 4 });
+    const moved = previous == null ? '' : ` (${formatSigned(record.value - previous)})`;
+    ring.append(svg('title', {}, `${formatWhen(record.at)}: ${formatNumber(record.value)}${moved}`));
+    chartSvg.append(ring);
+  });
+
+  panel.append(head, chartSvg);
+  return panel;
+}
+
 function noStatsReason({ fresh, player }) {
   if (fresh) return 'API เพิ่งเริ่มดึงข้อมูลผู้เล่นนี้จากเกม สถิติยังไม่พร้อม ลองค้นหาอีกครั้งในอีกสักครู่';
   if (Number(player.levelOperations ?? 0) > 1) return 'API ไม่มีสถิติของผู้เล่นนี้ (ผู้เล่นอาจตั้งค่าซ่อนประวัติในเกม หรือ API ยังดึงข้อมูลบัญชีนี้ไม่ได้) ลองใหม่ภายหลัง';
@@ -162,7 +246,9 @@ function render(report) {
   } else {
     grid.append(el('p', 'loading', noStatsReason(report)));
   }
-  nodes.push(bar, grid);
+  const stashBar = el('div', 'bar');
+  stashBar.append(el('h2', null, 'มูลค่าคลัง 7 วันล่าสุด'));
+  nodes.push(bar, grid, stashBar, stashChartPanel(report.stashChart));
   result.replaceChildren(...nodes);
   document.title = `${player.name} — ${pageTitle}`;
   statusLine.classList.remove('error');

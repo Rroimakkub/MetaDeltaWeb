@@ -189,6 +189,16 @@ body {
 .stat-list div { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px dashed #ffffff12; }
 .stat-list dt { color: var(--muted); }
 .stat-list dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.chart-panel { margin: 0 16px; padding: 12px; background: var(--card); border: 1px solid var(--line); }
+.chart-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 8px; font-size: 13px; }
+.chart-head .up { color: var(--profit); }
+.chart-head .down { color: var(--loss); }
+.chart-panel svg { display: block; width: 100%; height: auto; }
+.chart-panel text { font-family: inherit; font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.grid-line { stroke: var(--line); stroke-width: 1; }
+.chart-area { fill: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chart-line { fill: none; stroke: var(--accent); stroke-width: 2; }
+.chart-dot { fill: var(--card); stroke: var(--accent); stroke-width: 2; }
 
 .hint { margin: 12px 16px 0; text-align: center; font-size: 12px; color: var(--muted); }
 footer { padding: 8px 16px 24px; text-align: center; font-size: 12px; color: #5d6b70; }
