@@ -5,7 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { calculateCraft } from './api.js';
 import { getConfig } from './config.js';
 import { getCachedCraftRecommendations } from './crafting.js';
-import { getPlayerReport, getSeasons, isSeasonChoice, PlayerNotFoundError } from './player.js';
+import { getPlayerReport, getSeasons, isPlayerReportCached, isSeasonChoice, PlayerNotFoundError } from './player.js';
+import { createRateLimiter } from './rateLimit.js';
 
 // MetaDelta website: Black Site craft recommendations ranked by profit per hour from live market prices.
 const config = getConfig();
@@ -74,6 +75,18 @@ async function craftsPayload() {
   return payload.body;
 }
 
+// A player lookup that misses the cache spends 5-7 calls of the API key the bot also uses, so each visitor gets
+// 10 a minute and the whole site 60, which keeps someone looking up names in bulk from using up the key.
+const lookupsPerVisitor = createRateLimiter({ limit: 10, windowMs: 60_000 });
+const lookupsOverall = createRateLimiter({ limit: 60, windowMs: 60_000 });
+
+// Behind a reverse proxy every request comes from the proxy, so the visitor is the address the proxy appended to
+// X-Forwarded-For (the last entry; earlier ones are whatever the visitor sent). Without a proxy the header is untrusted.
+function visitorAddress(request) {
+  const forwarded = config.trustProxy ? request.headers['x-forwarded-for']?.split(',').at(-1)?.trim() : null;
+  return forwarded || request.socket.remoteAddress || 'unknown';
+}
+
 // body: an already serialized JSON string, or a value to serialize.
 const sendJson = (response, status, body) => response
   .writeHead(status, { ...HEADERS, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-cache' })
@@ -115,6 +128,14 @@ async function handleRequest(request, response) {
     if (!query || query.length > 64 || !isSeasonChoice(season)) {
       sendJson(response, 400, { error: 'ใส่ชื่อในเกมหรือ Delta Force ID' });
       return;
+    }
+    if (!isPlayerReportCached(query, season)) {
+      const wait = lookupsPerVisitor.take(visitorAddress(request)) || lookupsOverall.take('all');
+      if (wait) {
+        response.setHeader('Retry-After', String(wait));
+        sendJson(response, 429, { error: `ค้นหาบ่อยเกินไป ลองใหม่ในอีก ${wait} วินาที` });
+        return;
+      }
     }
     try {
       sendJson(response, 200, await getPlayerReport(config, query, season));

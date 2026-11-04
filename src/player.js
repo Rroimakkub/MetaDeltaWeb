@@ -172,7 +172,13 @@ async function fetchPlayerReport(config, query, seasonChoice) {
 
 const reports = new Map(); // `${query}|${seasonChoice}` -> { at, result }
 
-// Each lookup costs 4-6 API calls, so a report is reused for 5 minutes.
+// Whether a lookup would be answered from the cache, without calling the API.
+export function isPlayerReportCached(query, seasonChoice) {
+  const hit = reports.get(`${query}|${seasonChoice}`);
+  return Boolean(hit && Date.now() - hit.at < REPORT_TTL);
+}
+
+// Each lookup costs 5-7 API calls, so a report is reused for 5 minutes.
 export function getPlayerReport(config, query, seasonChoice) {
   const key = `${query}|${seasonChoice}`;
   const hit = reports.get(key);

@@ -23,6 +23,8 @@ export function getConfig() {
     webPort,
     // Only this computer by default; set WEB_HOST=0.0.0.0 on a server so others can open the site.
     webHost: process.env.WEB_HOST || '127.0.0.1',
+    // Set TRUST_PROXY=true only behind a reverse proxy such as Caddy, so visitors are told apart by X-Forwarded-For.
+    trustProxy: process.env.TRUST_PROXY === 'true',
     // Point this at the bot's data/recipes.json to share one recipe list instead of keeping a copy in sync.
     recipesPath: path.resolve(projectRoot, process.env.RECIPES_PATH || 'data/recipes.json'),
   };
